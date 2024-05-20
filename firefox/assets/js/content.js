@@ -3,7 +3,9 @@ var jve_websocket = null;
 var jve_websocket_port = 6349;
 var black_url = ["https://www.bilibili.com/"];
 var black_query = ["csource", "spm_id_from"];
-let video_index = [];
+let video_index = [
+  {url:"https://open.163.com/newview/movie/free",index:1}
+];
 var real_video_arr = null;
 var choosed_video_index = 0;
 var target_video_el = null;
@@ -48,8 +50,8 @@ function init() {
   // 控制哪个video？一般都是一个,默认控制第一个。
   // 查看配置里面是否有配置
   for (let i = 0; i < video_index.length; i++) {
-    if (video_index["url"] == buided_url) {
-      choosed_video_index = video_index["index"];
+    if (buided_url.indexOf(video_index[i]["url"])!=-1) {
+      choosed_video_index = video_index[i]["index"];
       break;
     }
   }

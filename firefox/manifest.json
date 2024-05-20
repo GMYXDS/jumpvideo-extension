@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "jumpvideo-electron",
-  "description": "jumpvideo-electron",
+  "name": "jumpvideo-extenstion",
+  "description": "jumpvideo-extenstion",
   "author": "Github-GMYXDS",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icons": {
     "128": "assets/image/icon.png",
     "16": "assets/image/icon.png",
@@ -13,7 +13,7 @@
   "browser_action": {
     "default_icon": "assets/image/icon.png",
     "default_popup": "assets/html/options.html",
-    "default_title": "jumpvideo-electron"
+    "default_title": "jumpvideo-extenstion"
   },
   "content_scripts": [
     {
@@ -55,7 +55,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "{d5d062b0-c18d-4ca1-8476-c341ab5a09b0}"
+      "id": "{8893c9a0-5100-4b34-a1a0-28c6913453d2}"
     }
   }
 }
