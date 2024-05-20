@@ -1,0 +1,65 @@
+
+.jve_con {
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 999999999999999999999;
+  }
+
+  .jve_con .img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .jve_con li,
+  .jve_con ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .jve_con:hover .func {
+    display: block;
+  }
+
+  .func {
+    position: absolute;
+    top: 14px;
+    right: 19px;
+    width: 118px;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: none;
+  }
+
+  .func .title {
+    font-size: 12px;
+    background-color: #eee;
+  }
+
+  .func div,
+  .func li {
+    text-align: center;
+    padding: 6px 0;
+  }
+
+  .dismiss,
+  .func li {
+    cursor: pointer;
+  }
+
+  .dismiss:hover {
+    color: #fff;
+    background-color: #333;
+  }
+
+  .func li:hover {
+    color: #fff;
+    background-color: #333;
+  }

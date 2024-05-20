@@ -1,0 +1,61 @@
+{
+  "manifest_version": 2,
+  "name": "jumpvideo-electron",
+  "description": "jumpvideo-electron",
+  "author": "Github-GMYXDS",
+  "version": "1.0.0",
+  "icons": {
+    "128": "assets/image/icon.png",
+    "16": "assets/image/icon.png",
+    "48": "assets/image/icon.png",
+    "64": "assets/image/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/image/icon.png",
+    "default_popup": "assets/html/options.html",
+    "default_title": "jumpvideo-electron"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/js/content.js"
+      ],
+      "css": [
+        "assets/style/content.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "assets/js/background.js"
+    ],
+    "persistent": true
+  },
+  "externally_connectable": {
+    "matches": [
+      "<all_urls>"
+    ]
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "contentSettings",
+    "http://*/",
+    "https://*/",
+    "webRequest",
+    "webRequestBlocking",
+    "cookies",
+    "notifications"
+  ],
+  "web_accessible_resources": [
+    "assets/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d5d062b0-c18d-4ca1-8476-c341ab5a09b0}"
+    }
+  }
+}

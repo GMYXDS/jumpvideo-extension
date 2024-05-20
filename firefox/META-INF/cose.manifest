@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+
+Name: manifest.json
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 2zgHkRagaKTpZG1BZg92MB3K0zQ=
+SHA256-Digest: 9lLsVZJgPGqsBj2REWwZpgmPChD6cnjiutPjKUmWzZk=
+
+Name: assets/html/options.html
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: +YQC/NjtQld1l/6af29uJlYuj6M=
+SHA256-Digest: Hd9DZ65Iku0DgJhxMnMSvEufuYE0dRZNlfCbHjRsXX8=
+
+Name: assets/html/test.html
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: RTTgYjB4fWrzYQGAKtx/rAgaF6A=
+SHA256-Digest: MOVZcdtTiA+hIjWPYh3caFy6El4RumjoUOLprFC/n3Y=
+
+Name: assets/style/content.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: NM5J8zESU05yu9U0V0E0wt7N2h8=
+SHA256-Digest: KcvpG18MTUWk/vgK6mMB9fCNRZRCHE+RNDXBEPG91SE=
+
+Name: assets/image/icon.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: vDcCv0FYgvmGXwD2H2tG0C1xDJ8=
+SHA256-Digest: 8n2s4uA+64opBThrG9blgqnJmSuCFCB/6I1rwAjH8Cc=
+
+Name: assets/js/background.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: fL5OGg/ZKTSTUiV8vJreA2V4meA=
+SHA256-Digest: FXGiSoCl3M7wsqfg4Qsa2ffU2+kOEIlJGq5lqWi0uF8=
+
+Name: assets/js/setting.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: Rs47+xaqZm5Z2yivUyXWpyzx32U=
+SHA256-Digest: QEfkb1slvqXNqlLTW7fLqHAVtiKFRicWVv6gZMhyR+U=
+
+Name: assets/js/inject.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+SHA256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: assets/js/content.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: HVSMjaXg4wAyOikDk8CUDz6xZ0o=
+SHA256-Digest: iPM28P2bymUExQCd/+UnFFAON3EWgyoz+3Hf4mv/aSk=
+

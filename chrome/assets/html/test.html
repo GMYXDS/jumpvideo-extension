@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .jve_con {
+    position: fixed;
+    right: 20px;
+    top: 50px;
+    /* cursor: move; */
+    font-size: 14px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .jve_con .img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .jve_con li,
+  .jve_con ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .jve_con:hover .func {
+    display: block;
+  }
+
+  .func {
+    /* position: relative; */
+    /* top: -10px; */
+    /* right: 116px; */
+    position: absolute;
+    top: 14px;
+    right: 19px;
+    width: 118px;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: none;
+  }
+
+  .func .title {
+    font-size: 12px;
+    background-color: #eee;
+  }
+
+  .func div,
+  .func li {
+    text-align: center;
+    /* margin-top: 5px; */
+    padding: 6px 0;
+  }
+
+  .dismiss,
+  .func li {
+    cursor: pointer;
+  }
+
+  .dismiss:hover {
+    color: #fff;
+    background-color: #333;
+  }
+
+  .func li:hover {
+    color: #fff;
+    background-color: #333;
+  }
+</style>
+
+<body>
+  <div class="jve_con" id="draggable">
+    <div class="btn">
+      <div class="img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.35 100">
+          <defs>
+            <linearGradient id="aea46ea21-aa15-4d07-98d9-2fd3f7319ba2" x1="74.04" y1="7.23" x2="25.84" y2="92.7"
+              gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#f2a320" />
+              <stop offset=".5" stop-color="#e145a8" />
+              <stop offset="1" stop-color="#7252fa" />
+            </linearGradient>
+          </defs>
+          <path d="M35.48 2.08a50 50 0 0 1 63.19 37.57z" fill="#f2a320" />
+          <path
+            d="M55.15 77.79l22.76 13.53a50.77 50.77 0 0 0 10.55-9.67L69 70.07zM3.46 31.11A49.15 49.15 0 0 0 0 45l20.57 12.23V41.28z"
+            fill="#e145a8" />
+          <path
+            d="M34.5 87.27a13.9 13.9 0 0 1-13.92-13.84L1.19 61.9A50 50 0 0 0 62.5 98.35L41.08 85.62a13.9 13.9 0 0 1-6.58 1.65z"
+            fill="#7252fa" />
+          <path
+            d="M82.92 50.33a7 7 0 0 1-3.57 6l-41.46 23.1a7 7 0 0 1-10.35-6.08V37l13.92 8.28V61.5L62 50.05l-20.54-12.2-30.2-18a7.55 7.55 0 0 1-.91-.66 50.29 50.29 0 0 1 10.34-9.9l58.82 34.96a6.93 6.93 0 0 1 3.41 6.08zm7 .3A14 14 0 0 1 83 62.23l12.65 7.52a49.63 49.63 0 0 0 3.66-13.5z"
+            fill="url(#aea46ea21-aa15-4d07-98d9-2fd3f7319ba2)" />
+        </svg>
+      </div>
+      <!-- <div class="status">状态</div> -->
+    </div>
+    <div class="func">
+      <div class="dismiss">忽略这个地址</div>
+      <div class="title">选择指定的video</div>
+      <ul class="video_list">
+        <li>video1</li>
+        <li>video2</li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  init_video_list()
+  init_dismiss()
+  init_draggable()
+  function init_video_list() {
+    document.querySelector(".jve_con .video_list").addEventListener("click", (e) => {
+      console.log(e.target);
+    })
+  }
+  function init_dismiss() {
+    document.querySelector(".jve_con .dismiss").addEventListener("click", (e) => {
+      console.log(e);
+    })
+  }
+
+  function display_video_list() {
+    document.querySelector(".jve_con .title").style.display = 'none'
+    document.querySelector(".jve_con .video_list").style.display = 'none'
+  }
+
+  function init_draggable() {
+    var draggable = document.getElementById('draggable');
+    var offsetX, offsetY;
+    draggable.onmousedown = function (e) {
+      e.preventDefault();
+      offsetX = e.clientX - draggable.offsetLeft;
+      offsetY = e.clientY - draggable.offsetTop;
+      document.onmousemove = function (e) {
+        var x = e.clientX - offsetX;
+        var y = e.clientY - offsetY;
+        x = Math.max(0, Math.min(x, window.innerWidth - draggable.offsetWidth));
+        y = Math.max(0, Math.min(y, window.innerHeight - draggable.offsetHeight));
+        draggable.style.left = x + 'px';
+        draggable.style.top = y + 'px';
+      };
+      document.onmouseup = function () {
+        document.onmousemove = null;
+        document.onmouseup = null;
+      };
+    };
+  }
+  function close_con() {
+    var myDiv = document.getElementById('myDiv');
+    myDiv.addEventListener('dblclick', function () {
+      myDiv.parentNode.removeChild(myDiv);
+    });
+  }
+
+</script>
+
+</html>
