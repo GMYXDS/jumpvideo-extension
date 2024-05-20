@@ -8,6 +8,8 @@ Github：[点击下载](https://github.com/GMYXDS/jumpvideo-extension/releases)
 
 蓝奏云：https://lanzoub.com/b03alm6nvi 密码: dhoy
 
+由于蓝奏云的限制，无法上传xpi格式文件，如果从蓝奏云下载firefox插件需要自己去掉后面.zip后缀
+
 ### 浏览器插件使用
 
 <img src="./images/image-20240520180833381.png" alt="image-20240520180833381" style="margin:0 auto" />
@@ -16,5 +18,5 @@ Github：[点击下载](https://github.com/GMYXDS/jumpvideo-extension/releases)
 
 当使用浏览器插件的时候，记得在软件首页设置一下链接获取的位置。默认是从Potplayer获取。
 
-只有当你的页面右上角显示这个图标，才表示插件可用，双击可用关闭这个图标。
+只有当你的页面右上角显示这个图标，才表示插件可用，双击可以关闭这个图标。
 
